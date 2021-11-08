@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shopapp/widgets/list_container.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -47,7 +48,7 @@ class HomePage extends StatelessWidget {
           right: 49,
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               width: 90,
@@ -106,11 +107,64 @@ class HomePage extends StatelessWidget {
 
     Widget listItem() {
       return Container(
+        margin: EdgeInsets.only(
+          top: 50,
+          left: 24,
+          right: 24,
+        ),
         child: Column(
           children: [
             Row(
-              children: [],
-            )
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ListContainer(
+                  imageUrl: 'assets/holiday_yes.png',
+                  title: 'Holiday Yes',
+                  item: '883 items',
+                ),
+                ListContainer(
+                  imageUrl: 'assets/party_ready.png',
+                  title: 'Party Ready',
+                  item: '441 items',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ListContainer(
+                  imageUrl: 'assets/new_worker.png',
+                  title: 'New Worker',
+                  item: '40,328 items',
+                ),
+                ListContainer(
+                  imageUrl: 'assets/daily_casual.png',
+                  title: 'Daily Casual',
+                  item: '18,393 items',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ListContainer(
+                  imageUrl: 'assets/confident.png',
+                  title: 'Confident',
+                  item: '200 items',
+                ),
+                ListContainer(
+                  imageUrl: 'assets/picnic_fever.png',
+                  title: 'Picnic Fevert',
+                  item: '663 items',
+                ),
+              ],
+            ),
           ],
         ),
       );
@@ -123,7 +177,7 @@ class HomePage extends StatelessWidget {
             children: [
               header(),
               category(),
-              ListView(),
+              listItem(),
             ],
           )
         ],
