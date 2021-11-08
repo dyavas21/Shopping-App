@@ -15,7 +15,7 @@ class ListContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 190,
-      width: 170,
+      width: 160,
       decoration: BoxDecoration(
         color: Color(0xffE5E5E5),
         borderRadius: BorderRadius.circular(16),

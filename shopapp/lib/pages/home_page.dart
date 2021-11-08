@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.only(
             left: 24,
             right: 24,
-            top: 30,
+            top: 5,
           ),
           child: Row(
             children: [
@@ -117,10 +117,15 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ListContainer(
-                  imageUrl: 'assets/holiday_yes.png',
-                  title: 'Holiday Yes',
-                  item: '883 items',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/categories');
+                  },
+                  child: ListContainer(
+                    imageUrl: 'assets/holiday_yes.png',
+                    title: 'Holiday Yes',
+                    item: '883 items',
+                  ),
                 ),
                 ListContainer(
                   imageUrl: 'assets/party_ready.png',
@@ -173,13 +178,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Column(
-            children: [
-              header(),
-              category(),
-              listItem(),
-            ],
-          )
+          header(),
+          category(),
+          listItem(),
         ],
       ),
     );
