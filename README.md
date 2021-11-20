@@ -6,7 +6,7 @@ This is a Slicing UI using flutter
 
 <br>
 
-The design is from my friend Darry Ramadhan
+The design is from https://pixel.buildwithangga.com/home
 
 <br>
 
